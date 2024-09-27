@@ -1,0 +1,31 @@
+.social-footer {
+    background-color: #00567B;
+    padding: 5px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links li {
+    display: inline;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  
