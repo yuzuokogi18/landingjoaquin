@@ -1,112 +1,61 @@
 .card-container {
-    display: flex;
-    align-items: flex-start; /* Alinea las tarjetas al principio en vertical */
-  }
-
-  .card {
-    width: 800px;
-    background-color:#f9e79f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 20px 20px;
-    margin-left: 20px;
-    border: 1px solid #ccc;
-    position: relative;
-  }
-
-
-  .card3 {
-    width: 800px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-     margin: 20px 20px;
-    margin-left: 20px;
-    border: 1px solid #ccc;
-    position: relative;
-  }
-  .card4 {
-    width: calc(100% - 40px);
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    position: relative;
-    box-sizing: border-box; /* Asegura que el padding y el border estén incluidos en el 100% */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre las tarjetas */
+  justify-content: center;
+  padding: 20px;
 }
 
-.card4 .card-header {
-    background-color: #9c9c9c;
-    color: rgb(16, 15, 15);
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
+.card {
+  flex: 1 1 calc(50% - 20px); /* Ocupa el 50% del ancho menos el margen */
+  max-width: 48%; /* Asegura que no exceda el ancho */
+  background-color: #f9e79f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 10px 0; /* Espaciado vertical */
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto */
 }
 
-.card4 .card-body {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
+.card:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta cuando el ratón pasa sobre ella */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar el efecto de elevación */
 }
 
-.card4 .turtle-card-image {
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-    margin-right: 20px;
+.card3 {
+  flex: 1 1 100%; /* Ocupa todo el ancho disponible */
+  max-width: 100%; /* Asegura que no exceda el ancho */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px 0; /* Espaciado vertical */
 }
 
-.card4 .card-text {
-    font-size: 16px;
-    color: #333;
-    flex: 1;
-    margin-right: 20px;
+.card-header {
+  background-color: #727272;
+  color: #101010;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
 }
 
-.card4 .card-body img:last-child {
-    margin-left: 20px;
+.card-body {
+  display: flex;
+  padding: 20px;
+  align-items: center;
 }
 
+.turtle-card-image {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
 
-  .card-header {
-    background-color: #727272;
-    color: rgb(16, 15, 15);
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .card-body {
-    display: flex;
-    padding: 20px;
-    align-items: center;
-  }
-
-  .turtle-card-image {
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-    margin-right: 20px;
-  }
-
-  .card-text {
-    font-size: 16px;
-    color: #333;
-    flex: 1;
-  }
-
-  .card3 .card-body {
-    flex-direction: column; 
-    align-items: center;
-  }
-
-  .card3 .turtle-card-image {
-    width: 220px; 
-  }
-  
-  
+.card-text {
+  font-size: 16px;
+  color: #333;
+  flex: 1;
+}

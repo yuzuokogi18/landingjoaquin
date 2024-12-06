@@ -1,39 +1,9 @@
 <div class="card-container">
-    <div class="card">
-      <div class="card-header">Longevidad</div>
-      <div class="card-body">
-        <img src="assets/p.jpg" alt="Tortuga" class="turtle-card-image">
-        <div class="card-text">
-          <p>Las tortugas marinas no solo son importantes para los ecosistemas marinos, sino que también tienen un profundo significado cultural para muchas comunidades costeras que dependen de ellas para su subsistencia y tradiciones.
-            Pueden vivir de 50 a 100 años, dependiendo de la especie y las condiciones ambientales.
-           Algunas especies pueden recorrer miles de kilómetros entre sus áreas de alimentación y los sitios donde desovan (ponen huevos). Por ejemplo, la tortuga laúd puede viajar más de 16,000 km en su vida.</p>
-          <p>Algunas especies pueden recorrer miles de kilómetros entre sus áreas de alimentación y los sitios donde desovan (ponen huevos). Por ejemplo, la tortuga laúd puede viajar más de 16,000 km en su vida.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card3">
-      <div class="card-header">Migración</div>
-      <div class="card-body">
-        <img src="assets/t.jpg" alt="Tortuga migrando" class="turtle-card-image">
-        <div class="card-text">
-          <p>Las tortugas marinas no solo son importantes para los ecosistemas marinos,
-            Pueden vivir de 50 a 100 años, dependiendo de la especie y las condiciones ambientales.
-           Algunas especies pueden recorrer miles de kilómetros entre sus áreas de alimentación y los sitios donde desovan (ponen huevos). Por ejemplo, la tortuga laúd puede viajar más de 16,000 km en su vida..Esa es la vida de las tortugas en su etapa de migracion.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <div class="card4">
-    <div class="card-header">Caparazón</div>
+  <div *ngFor="let card of cards" class="card">
+    <div class="card-header">{{ card.header }}</div>
     <div class="card-body">
-      <img src="assets/e.jpg" alt="Tortuga" class="turtle-card-image">
+      <img [src]="card.image" [alt]="card.alt" class="turtle-card-image">
       <div class="card-text">
-        <p>El caparazón de las tortugas marinas está diseñado para la vida acuática.</p>
-        <p>Es aerodinámico y les permite nadar eficientemente. Cada especie tiene un caparazón con una forma y textura particular. Por ejemplo, el de la tortuga laúd es más suave, mientras que el de la tortuga carey es duro y tiene escamas imbricadas.</p>
-      </div>
-      <img src="assets/d.jpg" alt="Tortuga" class="turtle-card-image">
-    </div>
- 
+        <p *ngFor="let paragraph of card.paragraphs">{{ paragraph }}</p>
+  </div>
+</div>
